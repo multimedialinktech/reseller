@@ -234,6 +234,10 @@
                         <textarea name="description" class="form-control" rows="3" id="description"></textarea>
                     </div>
                     <div class="form-group">
+                        <label>Tanggal Pemasangan</label>
+                        <input type="date" name="date" class="form-control" id="date">
+                    </div>
+                    <div class="form-group">
                         <button class="btn btn-primary send">Pasang Sekarang</button>
                     </div>
                     <span>*Saya setuju dengan <a href="sdkhome.html">syarat & ketentuan</a> yang berlaku.</span>
@@ -310,7 +314,8 @@
         input_phone         = $("#phone").val(),
         input_product       = $("#product").val(),
         input_area       = $("#area").val(),
-        input_description   = $("#description").val();
+        input_description   = $("#description").val(),
+        input_date   = $("#date").val();
  
     /* Pengaturan Whatsapp */
     var walink      = 'https://api.whatsapp.com/send',
@@ -334,7 +339,8 @@
             '*Nomor Kontak / Whatsapp* : ' + input_phone + '%0A' +
             '*Produk* : ' + input_product + '%0A' +
             '*Area* : ' + input_area + '%0A' +
-            '*Alamat* : ' + input_description + '%0A';
+            '*Alamat* : ' + input_description + '%0A' +
+            '*Alamat* : ' + input_date + '%0A' ;
  
         /* Whatsapp Window Open */
         window.open(checkout_whatsapp,'_blank');
